@@ -1,0 +1,568 @@
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+body, html {
+
+    margin:0;
+    padding:0;
+    color:#000;
+    background-color: green
+
+}
+
+#main {
+    position:relative;
+    overflow:hidden;
+}
+
+#header {
+    background-image:url("gameheader.jpg");
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.center h1 {display: inline;
+color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 80px; font-weight: bold; letter-spacing: -1px; line-height: 1;}
+.center img {margin: 0  px;}
+
+/*#container{
+  margin-left:auto;
+    margin-right: auto;
+  width:400px;
+}*/
+
+canvas
+{
+    width : 100%;
+    height: 80%;
+    position: relative;
+    left: 27%;
+}
+
+#puzzlelist
+{
+    font-size: 14px;
+    overflow-x: auto;
+    min-width: 100%;
+    table-layout: fixed;
+}
+
+#container3 {
+    position:relative;
+  clear:both;
+  float:left;
+  width:100%;
+  overflow:hidden;
+  padding-top: 20px;
+}
+#container2 {
+    float:left;
+  width:100%;
+  position:relative;
+  right:25%;
+}
+#container1 {
+   float:left;
+  width:100%;
+  position:relative;
+  right:50%;
+}
+#col1 {
+    float:left;
+  position:relative;
+  padding:0 0 1em 0;
+  overflow:hidden;
+    width:21%;
+    left:83%;
+}
+#col2 {
+   float:left;
+  position:relative;
+  padding:0 0 1em 0;
+  overflow:hidden;
+  width:67%;
+    left:83%;
+    text-align: center;
+}
+#col3 {
+    float:left;
+  position:relative;
+  padding:0 0 1em 0;
+  overflow:hidden;
+  width:21%;
+    left:85%;
+}
+
+/*#result
+{
+    color:red;
+    font-weight:bold;
+}
+*/
+
+
+#main {
+    position:relative;
+    overflow:hidden;
+}
+
+#navigation {
+    width:100%;
+    height: 10%;
+    background: #B8D1F3;
+    padding: 20px;
+}
+
+#navigation a {
+    color: blue;
+}
+
+.username {
+    color: yellow;
+}
+
+#sidebar a {
+    color: black;
+}
+
+#navigation li {
+    display:inline;
+    margin:0;
+    padding:0 100px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+h1 {
+    margin:0;
+}
+
+
+h2 {
+    margin:0 0 1em;
+}
+
+h3 {
+    margin:0;
+}
+
+#footer p {
+    margin:0;
+}
+
+fieldset {
+    border: 0;
+}
+
+label
+{
+width: 4em;
+float: left;
+text-align: right;
+margin-right: 0.5em;
+display: block
+}
+
+.submit input
+{
+margin-left: 4.5em;
+}
+
+li.error
+{
+    color:red;
+}
+
+#htname
+{
+    text-align: center;
+vertical-align: middle;
+line-height: 90px
+}
+
+/*#score
+{
+    color:green;
+    font-weight:bold;
+}
+#recscore
+{
+    color:blue;
+    font-weight:bold;
+}*/
+
+/* NAVIGATION */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background-image: url("header1.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 5px 0;
+  box-shadow: 3px 3px white, -1em 0 0.4em white;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+/* navigation */
+
+nav.navigation ul li a {
+  position:relative;
+  z-index: 1;
+}
+nav.navigation ul li a:hover {
+  color: #91640F;
+}
+nav.navigation ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #E0BD85;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+nav.navigation ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #D6B16D;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  margin: auto;
+}
+
+.cratetable {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 100%;
+  border-collapse:
+  collapse; border-spacing: 0;
+  text-align: center;
+}
+
+.cratetable td, th {
+  border: 1px solid transparent; /* No more visible border */
+  height: 30px;
+  transition: all 0.3s;  /* Simple transition for hover effect */
+}
+
+.cratetable th {
+  color: black;
+  background: yellow;  /* Darken header a bit */
+  font-weight: bold;
+}
+
+.cratetabletd {
+  background: #FAFAFA;
+  text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+.cratetable tr:nth-child(even) td { background: #499921; }
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+.cratetable tr:nth-child(odd) td { background: #247212; }
+
+.cratetable tr td:hover { background: yellow; color: black; } /* Hover cell effect! */
+
+h1{
+    position:relative;
+    color: white;
+    display: inline-block;
+    padding:0 10px;
+    height:40px;
+}
+
+.gamebutton {
+width: 300px;
+padding: 20px;
+font-weight: bold;
+font-size: 150%;
+background: #38820F;
+color: #FFFFFF;
+cursor: pointer;
+border: 1px solid white;
+border-radius: 10px;
+-webkit-box-shadow: 6px 6px 5px #999999;
+-moz-box-shadow: 6px 6px 5px #999999;
+box-shaddow: 6px 6px 5px; #999999;
+}
+
+.gamebutton:hover {
+color: #FFFF00;
+background: #38820F;
+border: 1px solid white;
+-webkit-box-shadow: 2px 2px 5px #666666;
+-moz-box-shadow: 2px 2px 5px #666666;
+box-shaddow: 2px 2px 5px; #666666;
+}
+
+.errorbox {
+    border-radius:10px;
+    padding:10px 36px;
+    margin:10px;
+    text-align: center;
+  }
+
+  .errorbox span {
+    font-weight:bold;
+    text-transform:uppercase;
+  }
+
+  .error {
+    color:#fff;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:13px;
+    background:#711000 url('error.png') no-repeat 10px 50%;
+    border:1px solid #f5aca6;
+  }
+
+  .notice {
+    color:#000;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:16px;
+    background:#FCFE04 url('info.png') no-repeat 10px 50%;
+    border:1px solid #8ed9f6;
+  }
+
+  .info {
+    color:#000;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:16px;
+    background:#1B7219;
+    border:1px solid #8ed9f6;
+  }
+
+
+  .success {
+    color:#000;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:16px;
+    background:#7DC41C url('success.png') no-repeat 10px 50%;
+    border:1px solid #a6ca8a;
+  }
+
+  /*######## Smart Green ########*/
+.smart-green {
+    margin-left:auto;
+    margin-right:auto;
+
+    max-width: 500px;
+    background: #F8F8F8;
+    padding: 30px 30px 20px 30px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #666;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.smart-green h1 {
+    font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 20px 0px 20px 40px;
+    display: block;
+    margin: -30px -30px 10px -30px;
+    color: #FFF;
+    background: #247212;
+    text-shadow: 1px 1px 1px #949494;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    border-bottom:1px solid #89AF4C;
+
+}
+.smart-green h1>span {
+    display: block;
+    font-size: 11px;
+    color: #FFF;
+}
+
+.smart-green label {
+    display: block;
+    margin: 0px 0px 5px;
+}
+.smart-green label>span {
+    float: left;
+    margin-top: 10px;
+    color: #5E5E5E;
+}
+.smart-green input[type="text"], .smart-green input[type="email"], .smart-green textarea, .smart-green input[type="password"] {
+    color: #555;
+    height: 30px;
+    line-height:15px;
+    width: 100%;
+    padding: 0px 0px 0px 10px;
+    margin-top: 2px;
+    border: 1px solid #E5E5E5;
+    background: #FBFBFB;
+    outline: 0;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    font: normal 14px/14px Arial, Helvetica, sans-serif;
+}
+.smart-green textarea{
+    height:100px;
+    padding-top: 10px;
+}
+.smart-green select {
+    background: url('down-arrow.png') no-repeat right, -moz-linear-gradient(top, #FBFBFB 0%, #E9E9E9 100%);
+    background: url('down-arrow.png') no-repeat right, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#E9E9E9));
+   appearance:none;
+    -webkit-appearance:none;
+   -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width:100%;
+    height:30px;
+}
+.smart-green .button {
+    background-color: #9DC45F;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #949494;
+}
+.smart-green .button:hover {
+    background-color:#80A24A;
+}
+
+
+  /*######## scorebox ########*/
+.scorebox {
+    border-radius:10px;
+    padding:10px 36px;
+    margin:10px;
+    text-align: center;
+  }
+
+  .scorebox span {
+    font-weight:bold;
+    text-transform:uppercase;
+  }
+
+  .current {
+    color:#000;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:16px;
+    background-color:#FCFE04;
+    border:1px solid #f5aca6;
+    font-weight: bold;
+  }
+
+  .total {
+    color:#000;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:16px;
+    background-color:#7DC41C;
+    border:1px solid #a6ca8a;
+    font-weight: bold;
+  }
+
+    .instructions {
+    color:#fff;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:14px;
+    font-weight: bold;
+  }
+
+#sidebuttoncontainer
+{
+  background: #1B7219;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:14px;
+  text-align: center;
+}
+
+ul#buttonlist
+{
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+ul#buttonlist li
+{
+  display: block;
+  margin: 0;
+  padding: 10px;
+}
+
+ul#buttonlist li a
+{
+  display: block;
+  width: 100%;
+  padding: 0.5em 0 0.5em 2em;
+  border-width: 1px;
+  border-color: #ffe #aaab9c #ccc #fff;
+  border-style: solid;
+  color: #fff;
+  text-decoration: none;
+  background: #D6984C;
+}
+
+#sidebuttoncontainer>ul#buttonlist li a { width: auto; }
+
+ul#buttonlist li#active a
+{
+background: #f0e7d7;
+color: #800000;
+}
+
+ul#buttonlist li a:hover, ul#buttonlist li#buttonlist a:hover
+{
+color: #800000;
+background-color: #D6984C;
+border-color: #aaab9c #fff #fff #ccc;
+}
+
+#stepaduio
+{
+  display: none;
+}
