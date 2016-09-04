@@ -3,7 +3,7 @@
 
     <head>
 
-        <title> Sign In </title>
+        <title> Update User record </title>
         <link rel="stylesheet" type="text/css" href="/stylesheet/crate.css">
 
     </head>
@@ -22,20 +22,20 @@
 
                         <div>
                             <form class=smart-green method="post" action="/users" id="mainForm" enctype="multipart/form-data">
-                            <input type="text" placeholder="name" name="name">
-                            <input type="password" placeholder="Password" name="pass">
-                            <input type="text" placeholder="Email" name="email">
-                            <input type="text" placeholder="Phone" name="phone">
-                            <input type="text" placeholder="Age" name="age">
+                            <input type="text" placeholder="name" name="name" value=<%= users[0].name %>>
+                            <input type="password" placeholder="Password" name="pass" value=<%= users[0].pass %>>
+                            <input type="text" placeholder="Email" name="email" value=<%= users[0].email %>>
+                            <input type="text" placeholder="Phone" name="phone" value=<%= users[0].phone %>>
+                            <input type="text" placeholder="Age" name="age" value=<%= users[0].age %>>
                             Gender:
                             <input type="radio" name="gender" value="male" checked> Male
                             <input type="radio" name="gender" value="female"> Female
                             <input type="radio" name="gender" value="other"> Other
-                            <input type="text" placeholder="Address 1" name="address1">
-                            <input type="text" placeholder="Address 2" name="address2">
-                            <input type="text" placeholder="City" name="city">
-                            <input type="text" placeholder="State" name="state">
-                            <input type="text" placeholder="Postal Code" name="postal">
+                            <input type="text" placeholder="Address 1" name="address1" value=<%= users[0].address1 %>>
+                            <input type="text" placeholder="Address 2" name="address2" value=<%= users[0].address2 %>>
+                            <input type="text" placeholder="City" name="city" value=<%= users[0].city %>>
+                            <input type="text" placeholder="State" name="state" value=<%= users[0].state %>>
+                            <input type="text" placeholder="Postal Code" name="postal" value=<%= users[0].postal %>>
                             Country:<select name="country">
                               <option value="usa">USA</option>
                               <option value="canada">Canada</option>
@@ -46,13 +46,14 @@
                               More details
                             </p>
                             <textarea name="details">
+                              <%= users[0].message %>
                             </textarea>
 
                             <input type="checkbox" name="agreement"> I am agree with terms and conditions
                             <p>
                             <input type="hidden" name="newImg" id="newImg">
                               <input type="file" id="img" name="img" accept=".gif,.jpg,.png"><br/>
-                              <img id="previewImg">
+                              <img id="previewImg" src=<%= "../public/uploads/" + users[0].ed_img %>>
                             </p>
                             <button type="submit">Add User</button>
                           </form>
@@ -61,8 +62,7 @@
 
         <script type="text/javascript" src="http://feather.aviary.com/imaging/v2/editor.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-
+        <script type="text/javascript" src="js/apped.js"></script>
 
     </body>
 

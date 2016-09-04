@@ -3,8 +3,9 @@
 
     <head>
 
-        <title> Sign In </title>
+        <title> Users List </title>
         <link rel="stylesheet" type="text/css" href="/stylesheet/crate.css">
+        <script type= "text/javascript" src="http://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 
     </head>
 
@@ -15,57 +16,21 @@
             <div id="header">
                 <header class="wrapper clearfix">
                     <div class="center">
-                        <h1 class="title">Sample Form using Mongo, Node , Express</h1>
+                        <h1 class="title">Forms Demo</h1>
                     </div>
                 </header>
             </div>
 
-            <nav class="navigation">
-              <div class="center">
-                  <h3>Just a sample</h1>
-              </div>
-            </nav>
-
-            <div id="container3">
-                <div id="container2">
-                    <div id="container1">
-                        <div id="col1">
-                          <form class=smart-green action="/users" method="POST">
-                            <input type="text" placeholder="name" name="name">
-                            <input type="password" placeholder="Password" name="pass">
-                            <input type="text" placeholder="Email" name="email">
-                            <input type="text" placeholder="Phone" name="phone">
-                            <input type="text" placeholder="Age" name="age">
-                            Gender:
-                            <input type="radio" name="gender" value="male" checked> Male
-                            <input type="radio" name="gender" value="female"> Female
-                            <input type="radio" name="gender" value="other"> Other
-                            <input type="text" placeholder="Address 1" name="address1">
-                            <input type="text" placeholder="Address 2" name="address2">
-                            <input type="text" placeholder="City" name="city">
-                            <input type="text" placeholder="State" name="state">
-                            <input type="text" placeholder="Postal Code" name="postal">
-                            Country:<select name="country">
-                              <option value="usa">USA</option>
-                              <option value="canada">Canada</option>
-                              <option value="uk">UK</option>
-                              <option value="aus">Australia</option>
-                            </select>
-                            <textarea name="message">
-                            Comments
-                            </textarea>
-
-                            <input type="checkbox" name="agreement"> I am agree with terms and conditions
-                            <button type="submit">Sign Up</button>
-                          </form>
-                        </div>
-                        <div id="col2">
+                        <div>
                             <div>
-                              <table class="cratetable" >
+                              <form class=smart-green method="post" action="/adduser" id="mainForm" enctype="multipart/form-data">
+                                 <button type="submit">Add new User</button>
+                              </form>
+                              <table id="listtable" class="sortable" style="height: 1px;  overflow-y: auto;  overflow-x: hidden; ">
                                 <caption>Users Signed up </caption>
+                                <thead>
                                 <tr>
                                   <th>Name</th>
-                                  <th>Password</th>
                                   <th>Email</th>
                                   <th>Phone</th>
                                   <th>Age</th>
@@ -76,12 +41,14 @@
                                   <th>State</th>
                                   <th>Postal Code</th>
                                   <th>Country</th>
-                                  <th>message</th>
+                                  <th>Details</th>
+                                  <th>Edit</th>
                                 </tr>
+                                </thead>
+                                <tbody>
                               <% for(var i=0; i<users.length; i++) {%>
                                 <tr>
                                   <td><%= users[i].name %></td>
-                                  <td><%= users[i].pass %></td>
                                   <td><%= users[i].email %></td>
                                   <td><%= users[i].phone %></td>
                                   <td><%= users[i].age %></td>
@@ -93,18 +60,23 @@
                                   <td><%= users[i].postal %></td>
                                   <td><%= users[i].country %></td>
                                   <td><%= users[i].message %></td>
+                                  <td><a href=<%= '/edit?user=' + users[i].name %>>Edit</td>
                                 </tr>
                               <% } %>
+                              </tbody>
                             </table>
-                            </div>
                         </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
+        <script type="text/javascript" src="http://feather.aviary.com/imaging/v2/editor.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script>
+        $(document).ready(function() {
+
+          newTableObject = document.getElementById('listtable');
+          sorttable.makeSortable(newTableObject);
+        });
+        </script>
 
     </body>
 
